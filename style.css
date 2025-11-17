@@ -178,7 +178,6 @@ nav ul li.barren_link {
   padding: 30px 20px;
   border-bottom: 1px solid var(--header_color);
   font-weight: bold;
-  font-size: 20px;
 }
 
 nav ul li.barren_link a {
@@ -675,3 +674,4 @@ main > p {
     left: 50%;
   }
 }
+
