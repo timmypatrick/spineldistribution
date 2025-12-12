@@ -333,3 +333,107 @@ quick_main_menu_head.addEventListener("click", () => {
     }
   }
 });
+
+// Gallery Scripting Begins
+
+var slide_index2, slides2, dot2, dot_arr2, text2, dot_wrapper2;
+function gallery2() {
+  slide_index2 = 0;
+  slides2 = document.querySelectorAll(".image_holder2");
+  slides2[slide_index2].style.opacity = 1;
+  text2 = document.querySelector("#caption_text2");
+  text2.textContent = slides2[slide_index2].querySelector(".text2").innerText;
+  dot_arr2 = [];
+  dot_wrapper2 = document.getElementById("dot-wrapper2");
+
+  for (var w2 = 0; w2 < slides2.length; w2++) {
+    dot2 = document.createElement("span");
+    dot_arr2.push(dot2);
+    dot_wrapper2.append(dot2);
+    dot2.setAttribute("onclick", "to_move_slide2(" + w2 + ")");
+  }
+  dot_arr2[slide_index2].classList.add("active2");
+}
+gallery2();
+
+interval2 = null;
+function set_timer2() {
+  interval2 = setInterval(function () {
+    increase_slide2(1);
+  }, 5000);
+}
+set_timer2();
+
+function increase_slide2(add2) {
+  to_move_slide2(slide_index2 + add2);
+}
+
+function to_move_slide2(n2) {
+  var present2, future2;
+  var move_slide2 = {
+    now2: "",
+    will_come2: "",
+  };
+
+  if (n2 > slide_index2) {
+    if (n2 == slides2.length) {
+      n2 = 0;
+    }
+
+    move_slide2.now2 = "present_slide_go_left2";
+    move_slide2.will_come2 = "future_slide_come_left2";
+  } else if (n2 < slide_index2) {
+    if (n2 < 0) {
+      n2 = slides2.length - 1;
+    }
+
+    move_slide2.now2 = "present_slide_go_right2";
+    move_slide2.will_come2 = "future_slide_come_right2";
+  }
+
+  if (n2 != slide_index2) {
+    present2 = slides2[slide_index2];
+    future2 = slides2[n2];
+
+    for (var g2 = 0; g2 < slides2.length; g2++) {
+      slides2[g2].className = "image_holder2";
+      slides2[g2].style.opacity = 0;
+      dot_arr2[g2].classList.remove("active2");
+    }
+
+    present2.classList.add(move_slide2.now2);
+    future2.classList.add(move_slide2.will_come2);
+    dot_arr2[n2].classList.add("active2");
+    slide_index2 = n2;
+  }
+  text2.style.display = "none";
+  text2.textContent = slides2[n2].querySelector(".text2").innerText;
+  text2.style.display = "initial";
+}
+
+function play_pause_func2() {
+  var target_play_pause2 = document.getElementById("play_pause2");
+  if (interval2 == null) {
+    set_timer2();
+    target_play_pause2.style.backgroundPositionY = "0px";
+  } else {
+    clearInterval(interval2);
+    interval2 = null;
+    target_play_pause2.style.backgroundPositionY = "-34px";
+  }
+}
+
+function my_animation() {
+  let typing_arr = new Typed("#animation", {
+    strings: [
+      "Reliable distribution ",
+      "Strong OEM partnerships",
+      "Expert technical support",
+    ],
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true,
+    showCursor: false,
+  });
+}
+my_animation();
