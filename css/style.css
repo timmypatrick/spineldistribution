@@ -1054,7 +1054,7 @@ footer {
   font-size: 17px;
   border: none;
   border-radius: 3px;
-  outline: 3px solid var(--header_color);
+  outline: 2px solid var(--header_color);
   color: var(--sharp_header_color);
 }
 
@@ -1210,7 +1210,7 @@ footer {
   background-color: var(--white);
   width: 80%;
   max-width: 500px;
-  margin: 50px auto 0px;
+  margin: 50px auto 70px;
   text-align: center;
   color: var(--grey_text);
   padding-bottom: 70px;
@@ -1697,6 +1697,10 @@ footer {
 
   .main_body_content .contact_form {
     margin: 30px 20px 100px;
+  }
+
+  .thank_you_message {
+    margin-bottom: 100px;
   }
 
   /* Products Page */
