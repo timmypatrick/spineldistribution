@@ -10,7 +10,7 @@ let hamburger3 = document.querySelector(".hamburger > div:last-child");
 
 let search_icon = document.querySelector("i.search_icon");
 let mobile_search_container = document.querySelector(
-  ".mobile_search_container"
+  ".mobile_search_container",
 );
 
 // User Account Declaretion
@@ -20,7 +20,7 @@ let user_account = document.querySelector(".user_account");
 let login = document.querySelector(".user_account .login");
 let sign_up = document.querySelector(".user_account .sign_up");
 let create_account = document.querySelector(
-  ".new_customer .create_account_now"
+  ".new_customer .create_account_now",
 );
 let login_account = document.querySelector(".new_customer .login_account_now");
 
@@ -42,13 +42,13 @@ let quick_offices_plus = document.querySelector(".quick_links .offices_plus");
 
 let quick_link_main_menu = document.querySelector(".quick_links .main_menu");
 let quick_main_menu_head = document.querySelector(
-  ".quick_links .main_menu_head"
+  ".quick_links .main_menu_head",
 );
 let quick_main_menu_body = document.querySelector(
-  ".quick_links .main_menu_body"
+  ".quick_links .main_menu_body",
 );
 let quick_main_menu_plus = document.querySelector(
-  ".quick_links .main_menu_plus"
+  ".quick_links .main_menu_plus",
 );
 
 // All Interactivity Begins
