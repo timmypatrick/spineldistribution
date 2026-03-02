@@ -2206,11 +2206,16 @@ footer {
     overflow: visible;
   }
 
+  nav ul > li > div:last-child a {
+    color: var(--grey_text);
+  }
+
   nav .product_body,
   nav .solution_body {
     background-color: var(--white);
     position: absolute;
-    width: 300px;
+    width: 370px;
+    height: 100%;
     top: 0px;
     left: 100%;
   }
@@ -2441,15 +2446,6 @@ footer {
     margin: 70px 50px 100px;
     width: calc(100% - 100px);
   }
-
-  /* .product_1_table {
-  margin: 70px 20px;
-  border-collapse: collapse;
-  width: calc(100% - 40px);
-  border: 1px solid var(--black);
-  font-size: 14px;
-  background-color: red;
-} */
 }
 
 /* User Account For Other Laptop Views */
