@@ -188,20 +188,13 @@
                   <a href="">Intrusion Detection</a>
                 </div>
               </div>
-              
+
               <!-- Telecommunication -->
 
               <div class="each_inner_solutions">
                 <div class="solution_head">Telecommunication</div>
                 <div class="solution_body">
-                  <a href="">Wireless Communication</a>
-                  <a href="">Critical Communication</a>
-                  <a href="">Infrastructure Solution</a>
-                  <a href="">Structure Office Cabling</a>
-                  <a href="">Wireless Communication</a>
-                  <a href="">Critical Communication</a>
-                  <a href="">Infrastructure Solution</a>
-                  <a href="">Structure Office Cabling</a>
+                  <a href="">Wireless Solution</a>
                 </div>
               </div>
 
@@ -231,73 +224,6 @@
                   <a href="">Energy systems of the future</a>
                   <a href="">Application samples</a>
                   <a href="">Battery Energy Storage System</a>
-                </div>
-              </div>
-
-              <!-- Cybersecurity & Disaster Recovery -->
-
-              <div class="each_inner_solutions">
-                <div class="solution_head">
-                  Cybersecurity & Disaster Recovery
-                </div>
-                <div class="solution_body">
-                  <a href="">Cybersecurity Solution</a>
-                  <a href="">Data Loss Prevention</a>
-                  <a href=""
-                    >Advanced Intrusion Detection and Prevention Systems
-                    (IDPS)</a
-                  >
-                  <a href="">Cybersecurity Solution</a>
-                  <a href="">Data Loss Prevention</a>
-                  <a href="">Cybersecurity Solution</a>
-                  <a href="">Data Loss Prevention</a>
-                </div>
-              </div>
-
-              <!-- Critical Assess Monitoring -->
-
-              <div class="each_inner_solutions">
-                <div class="solution_head">Critical Assess Monitoring</div>
-                <div class="solution_body">
-                  <a href="">Safety & Security</a>
-                  <a href="">RADRR Solution</a>
-                  <a href="">Drone Surveillance</a>
-                  <a href="">Asset Tagging & Tracking</a>
-                  <a href="">Safety & Security</a>
-                  <a href="">RADRR Solution</a>
-                  <a href="">Drone Surveillance</a>
-                  <a href="">Asset Tagging & Tracking</a>
-                </div>
-              </div>
-
-              <!-- Enclosure Manufacturing -->
-
-              <div class="each_inner_solutions">
-                <div class="solution_head">Enclosure Manufacturing</div>
-                <div class="solution_body">
-                  <a href="">Engineering</a>
-                  <a href="">Supply</a>
-                  <a href="">Manufacturing</a>
-                  <a href="">Consulting</a>
-                  <a href="">Operations and Service</a>
-                </div>
-              </div>
-
-              <!-- Information Communication Technology -->
-
-              <div class="each_inner_solutions">
-                <div class="solution_head">
-                  Information Communication Technology
-                </div>
-                <div class="solution_body">
-                  <a href="">Data Center Solution</a>
-                  <a href="">LAN, WAN Implementation</a>
-                  <a href="">Network Security</a>
-                  <a href="">Cloud Solution</a>
-                  <a href="">Data Center Solution</a>
-                  <a href="">LAN, WAN Implementation</a>
-                  <a href="">Network Security</a>
-                  <a href="">Cloud Solution</a>
                 </div>
               </div>
             </div>
@@ -479,7 +405,7 @@
 
         <section class="hero_cta">
           <p class="heading">
-            Empowering Africa’s ICT Ecosystem with World-Class Technology
+            Empowering Africa's ICT Ecosystem with World-Class Technology
           </p>
           <p id="animation"></p>
           <a href="">Shop Products</a>
@@ -1137,38 +1063,46 @@
               Subscribe to our weekly newsletter and receive exclusive offers on
               products you love!
             </p>
+
             <form
-              action="https://formsubmit.co/d93fd35dfe00c673cda133395db4ec60"
-              method="POST"
+              action="https://api.web3forms.com/submit"
               class="news_letter_form"
+              method="POST"
+              id="form"
             >
               <div class="label_input">
                 <input
                   type="email"
                   name="Email"
-                  id="email"
+                  id="Email"
                   placeholder=""
                   required
                 />
-                <label for="email">Your email</label>
+                <label for="email">Your Email</label>
 
                 <!-- API Inputs -->
                 <input
                   type="hidden"
-                  name="website"
-                  value="Spinel Distribution"
-                />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input
-                  type="hidden"
-                  name="_subject"
+                  name="form_name"
                   value="Newsletter Subscription"
                 />
+
                 <input
                   type="hidden"
-                  name="_next"
-                  value="https://timmypatrick.github.io/spineldistribution/subscription_greetings"
+                  name="subject"
+                  value="Spinel Distribution"
+                />
+
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="https://timmypatrick.github.io/spineldistribution/contact_greetings.html"
+                />
+
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="1175cfcf-9915-4426-b9f3-844b0d2bf8ff"
                 />
               </div>
               <button>Subscribe</button>
@@ -1184,5 +1118,27 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/typed.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script>
+      const SUPABASE_URL = "https://yyumrepmcmvdwzhzcreo.supabase.co";
+      const SUPABASE_KEY =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl5dW1yZXBtY212ZHd6aHpjcmVvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMzMzIwMjgsImV4cCI6MjA4ODkwODAyOH0.Cu-rP4n_5Y3cPFoomNMrdyaMeTO4btJjNtOlgiIferc";
+
+      const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+      document
+        .getElementById("form")
+        .addEventListener("submit", async function (e) {
+          //   e.preventDefault();
+
+          const Email = document.getElementById("Email").value;
+
+          await client
+            .from("Newsletter_Subscription")
+            .insert([{ Email: Email }]);
+
+          document.getElementById("form").reset();
+        });
+    </script>
   </body>
 </html>
