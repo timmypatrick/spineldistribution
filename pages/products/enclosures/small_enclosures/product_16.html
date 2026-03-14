@@ -735,32 +735,44 @@
               products you love!
             </p>
             <form
-              action="https://formsubmit.co/timmypatrick999@gmail.com"
-              method="POST"
+              action="https://api.web3forms.com/submit"
               class="news_letter_form"
+              method="POST"
+              id="form"
             >
               <div class="label_input">
                 <input
                   type="email"
                   name="Email"
-                  id="email"
+                  id="Email"
                   placeholder=""
                   required
                 />
-                <label for="email">Your email</label>
+                <label for="email">Your Email</label>
 
                 <!-- API Inputs -->
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="false" />
                 <input
                   type="hidden"
-                  name="_subject"
-                  value="Spinel Newsletter Subscription"
+                  name="form_name"
+                  value="Newsletter Subscription"
                 />
+
                 <input
                   type="hidden"
-                  name="_next"
+                  name="subject"
+                  value="Spinel Distribution"
+                />
+
+                <input
+                  type="hidden"
+                  name="redirect"
                   value="https://timmypatrick.github.io/spineldistribution/subscription_greetings.html"
+                />
+
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="1175cfcf-9915-4426-b9f3-844b0d2bf8ff"
                 />
               </div>
               <button>Subscribe</button>
@@ -769,11 +781,33 @@
         </div>
       </section>
       <section class="copywrite">
-        <span>©</span> 2025 Spinel Distripution. All Rights Reserved.
+        <span>©</span> 2026 Spinel Distripution. All Rights Reserved.
       </section>
     </footer>
 
     <script src="../../../../js/swiper-bundle.min.js"></script>
     <script src="../../../../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script>
+      const SUPABASE_URL = "https://yyumrepmcmvdwzhzcreo.supabase.co";
+      const SUPABASE_KEY =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl5dW1yZXBtY212ZHd6aHpjcmVvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMzMzIwMjgsImV4cCI6MjA4ODkwODAyOH0.Cu-rP4n_5Y3cPFoomNMrdyaMeTO4btJjNtOlgiIferc";
+
+      const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+      document
+        .getElementById("form")
+        .addEventListener("submit", async function (e) {
+          //   e.preventDefault();
+
+          const Email = document.getElementById("Email").value;
+
+          await client
+            .from("Newsletter_Subscription")
+            .insert([{ Email: Email }]);
+
+          document.getElementById("form").reset();
+        });
+    </script>
   </body>
 </html>
