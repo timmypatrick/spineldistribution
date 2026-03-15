@@ -428,9 +428,10 @@
         <h2 class="contact_heading">Contact Us</h2>
         <!-- User Contact Details -->
         <form
-          action="https://formsubmit.co/d93fd35dfe00c673cda133395db4ec60"
-          method="POST"
+          action="https://api.web3forms.com/submit"
           class="contact_form"
+          method="POST"
+          id="cd_form"
         >
           <h4>
             Contact us by completing the form below, the information submitted
@@ -475,7 +476,12 @@
               <span>Phone Number</span><span class="star">*</span>
             </div>
             <div class="data_field">
-              <input type="tel" name="Contact" id="phone_number" required />
+              <input
+                type="tel"
+                name="Phone_Number"
+                id="phone_number"
+                required
+              />
               <label for="phone_number"
                 >please enter a valid phone number</label
               >
@@ -487,7 +493,7 @@
               <span>Address</span>
             </div>
             <div class="data_field">
-              <input type="text" name="Street_Address" id="street" />
+              <input type="text" name="Address" id="street" />
             </div>
           </div>
 
@@ -496,7 +502,7 @@
               <span>State</span><span class="star">*</span>
             </div>
             <div class="data_field">
-              <input type="text" name="Residential_State" id="state" required />
+              <input type="text" name="State" id="state" required />
             </div>
           </div>
 
@@ -505,12 +511,7 @@
               <span>Country</span><span class="star">*</span>
             </div>
             <div class="data_field">
-              <input
-                type="text"
-                name="Residential_Country"
-                id="country"
-                required
-              />
+              <input type="text" name="Country" id="country" required />
             </div>
           </div>
 
@@ -524,18 +525,20 @@
           </div>
 
           <!-- API Inputs -->
+          <input type="hidden" name="form_name" value="Contact Details" />
+
+          <input type="hidden" name="subject" value="Spinel Distribution" />
+
           <input
             type="hidden"
-            name="Website Form"
-            value="Spinel Distribution"
+            name="redirect"
+            value="https://timmypatrick.github.io/spineldistribution/contact_greetings.html"
           />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_subject" value="Contact Form" />
+
           <input
             type="hidden"
-            name="_next"
-            value="https://timmypatrick.github.io/spineldistribution/contact_greetings"
+            name="access_key"
+            value="1175cfcf-9915-4426-b9f3-844b0d2bf8ff"
           />
 
           <div class="submit_data">
@@ -751,7 +754,7 @@
               action="https://api.web3forms.com/submit"
               class="news_letter_form"
               method="POST"
-              id="form"
+              id="ns_form"
             >
               <div class="label_input">
                 <input
@@ -802,24 +805,46 @@
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script>
-      const SUPABASE_URL = "https://yyumrepmcmvdwzhzcreo.supabase.co";
-      const SUPABASE_KEY =
+      // Newsletter Subscription => NS
+
+      const NS_SUPABASE_URL = "https://yyumrepmcmvdwzhzcreo.supabase.co";
+      const NS_SUPABASE_KEY =
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl5dW1yZXBtY212ZHd6aHpjcmVvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMzMzIwMjgsImV4cCI6MjA4ODkwODAyOH0.Cu-rP4n_5Y3cPFoomNMrdyaMeTO4btJjNtOlgiIferc";
 
-      const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+      const ns_client = supabase.createClient(NS_SUPABASE_URL, NS_SUPABASE_KEY);
 
       document
-        .getElementById("form")
+        .getElementById("ns_form")
         .addEventListener("submit", async function (e) {
           //   e.preventDefault();
 
-          const Email = document.getElementById("Email").value;
+          const NS_Email = document.querySelector("#ns_form #Email").value;
 
-          await client
+          await ns_client
             .from("Newsletter_Subscription")
-            .insert([{ Email: Email }]);
+            .insert([{ Email: NS_Email }]);
 
-          document.getElementById("form").reset();
+          document.getElementById("ns_form").reset();
+        });
+
+      // Contact Details => CD
+
+      const CD_SUPABASE_URL = "https://yyumrepmcmvdwzhzcreo.supabase.co";
+      const CD_SUPABASE_KEY =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl5dW1yZXBtY212ZHd6aHpjcmVvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMzMzIwMjgsImV4cCI6MjA4ODkwODAyOH0.Cu-rP4n_5Y3cPFoomNMrdyaMeTO4btJjNtOlgiIferc";
+
+      const cd_client = supabase.createClient(CD_SUPABASE_URL, CD_SUPABASE_KEY);
+
+      document
+        .getElementById("cd_form")
+        .addEventListener("submit", async function (e) {
+          //   e.preventDefault();
+
+          const CD_Email = document.querySelector("#cd_form #Email").value;
+
+          await cd_client.from("Contact_Details").insert([{ Email: CD_Email }]);
+
+          document.getElementById("cd_form").reset();
         });
     </script>
   </body>
