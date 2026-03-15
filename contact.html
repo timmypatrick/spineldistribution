@@ -457,7 +457,7 @@
           <div class="each_data">
             <div class="data_name">Company Name</div>
             <div class="data_field">
-              <input type="text" name="Company" />
+              <input type="text" name="Company" id="company" />
             </div>
           </div>
 
@@ -482,9 +482,9 @@
                 id="phone_number"
                 required
               />
-              <label for="phone_number"
-                >please enter a valid phone number</label
-              >
+              <label for="phone_number">
+                please enter a valid phone number
+              </label>
             </div>
           </div>
 
@@ -493,7 +493,7 @@
               <span>Address</span>
             </div>
             <div class="data_field">
-              <input type="text" name="Address" id="street" />
+              <input type="text" name="Address" id="address" />
             </div>
           </div>
 
@@ -520,7 +520,7 @@
               <span>Description</span><span class="star">*</span>
             </div>
             <div class="data_field">
-              <textarea name="Message" required></textarea>
+              <textarea name="Message" id="message" required></textarea>
             </div>
           </div>
 
@@ -840,9 +840,43 @@
         .addEventListener("submit", async function (e) {
           //   e.preventDefault();
 
-          const CD_Email = document.querySelector("#cd_form #Email").value;
+          const CD_First_Name = document.querySelector(
+            "#cd_form #first_name",
+          ).value;
 
-          await cd_client.from("Contact_Details").insert([{ Email: CD_Email }]);
+          const CD_Last_Name = document.querySelector(
+            "#cd_form #last_name",
+          ).value;
+
+          const CD_Company = document.querySelector("#cd_form #company").value;
+
+          const CD_Email = document.querySelector("#cd_form #email").value;
+
+          const CD_Phone_Number = document.querySelector(
+            "#cd_form #phone_number",
+          ).value;
+
+          const CD_Address = document.querySelector("#cd_form #address").value;
+
+          const CD_State = document.querySelector("#cd_form #state").value;
+
+          const CD_Country = document.querySelector("#cd_form #country").value;
+
+          const CD_Message = document.querySelector("#cd_form #message").value;
+
+          await cd_client.from("Contact_Details").insert([
+            {
+              First_Name: CD_First_Name,
+              Last_Name: CD_Last_Name,
+              Company: CD_Company,
+              Email: CD_Email,
+              Phone_Number: CD_Phone_Number,
+              Address: CD_Address,
+              State: CD_State,
+              Country: CD_Country,
+              Message: CD_Message,
+            },
+          ]);
 
           document.getElementById("cd_form").reset();
         });
