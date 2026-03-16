@@ -1631,6 +1631,10 @@ footer {
   display: block;
 }
 
+.product_1_download .download_icon {
+  margin-left: 7px;
+}
+
 .product_table_wrapper {
   overflow: auto;
 }
