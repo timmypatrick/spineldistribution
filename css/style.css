@@ -1755,6 +1755,206 @@ footer {
   border-top: 1px solid black;
 }
 
+/* Renewable Energy */
+
+/* Solar Batteries */
+
+.lifepo4_overview {
+  background-image: url("../images/products/renewable_energy/solar_batteries/img_1_mobile.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 700px;
+}
+
+.dark_lifepo4 {
+  background-color: rgba(39, 8, 51, 0.9);
+  color: var(--white);
+  height: 100%;
+  padding: 50px 20px 0px;
+}
+
+.inner_dark_lifepo4 {
+  width: 88%;
+  margin: auto;
+}
+
+.lifepo4_overview .lifepo4_head {
+  font-size: 28px;
+}
+
+.lifepo4_overview .lifepo4_body {
+  line-height: 27px;
+  margin-top: 10px;
+}
+
+.lifepo4_overview a {
+  background-color: var(--header_color);
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: block;
+  width: fit-content;
+  margin: 50px auto 0px;
+}
+
+.lifepo4_overview a span:last-child {
+  margin-left: 8px;
+}
+
+#available_lifepo4_battery {
+  background-color: white;
+  padding: 160px 20px 20px;
+}
+
+.each_lifepo4_battery {
+  text-decoration: none;
+  color: var(--black);
+  display: block;
+  margin-bottom: 50px;
+}
+
+.each_lifepo4_battery img {
+  margin: auto;
+  width: 80%;
+  display: block;
+}
+
+.each_lifepo4_battery .battery_name {
+  width: 60%;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  margin: auto;
+}
+
+.each_lifepo4_battery .learn_more {
+  background-color: var(--header_color);
+  color: var(--white);
+  width: fit-content;
+  margin: 30px auto 0px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.lifepo4_benefits,
+.lifepo4_features,
+.lifepo4_uses {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.lifepo4_benefits .lifepo4_head,
+.lifepo4_features .lifepo4_head,
+.lifepo4_uses .lifepo4_head {
+  font-size: 27px;
+  line-height: 30px;
+  margin: 70px 20px 20px;
+  color: var(--grey_text);
+}
+
+.lifepo4_benefits .lifepo4_body,
+.lifepo4_features .lifepo4_body,
+.lifepo4_uses .lifepo4_body {
+  line-height: 27px;
+  margin: 0px 20px;
+  color: var(--grey_text);
+}
+
+.lifepo4_benefits ul,
+.lifepo4_features ul,
+.lifepo4_uses ul {
+  margin: 20px;
+}
+
+.lifepo4_uses {
+  margin-bottom: 70px;
+}
+
+/* Solar Battery 1 */
+
+.each_battery_lifepo4_overview {
+  height: 750px;
+}
+
+.lifepo4_overview .solar_battery_order {
+  margin: 30px 0px 0px;
+}
+
+.brief_battery_info .battery_image {
+  background-color: var(--white);
+}
+
+.brief_battery_info .battery_image img {
+  width: 60%;
+  margin: auto;
+  display: block;
+}
+
+.brief_battery_info .battery_text {
+  background-color: var(--footer_color);
+  color: var(--sharp_header_color);
+  padding: 50px 20px;
+}
+
+.brief_battery_info .battery_text h2 {
+  margin-bottom: 10px;
+}
+
+.battery_main_features {
+  margin: 70px 20px;
+  color: var(--grey_text);
+}
+
+.battery_main_features h2 {
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+.battery_main_features hr {
+  width: 15%;
+  border: 1px solid var(--header_color);
+  margin: -10px 0px 50px;
+}
+
+.each_battery_main_feature {
+  display: flex;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.battery_main_features .check_wrapper {
+  margin-right: 20px;
+}
+
+.battery_main_features .check_wrapper i {
+  font-size: 20px;
+}
+
+.datasheet_manual {
+  margin: 0px auto 50px;
+  width: fit-content;
+}
+
+.datasheet_manual a {
+  background-color: var(--header_color);
+  color: var(--white);
+  margin: 30px 0px 0px 0px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  width: 200px;
+  text-align: center;
+}
+
+.datasheet_manual a span:last-child {
+  margin-left: 10px;
+}
+
 /* Large Mobile View */
 @media only screen and (min-width: 500px) {
   .oem_body .each_oem {
@@ -2034,6 +2234,60 @@ footer {
   .product_1_table thead th,
   .product_1_table tbody td {
     padding-left: 15px;
+  }
+
+  /* Solar Batteries */
+
+  .lifepo4_overview {
+    margin-top: -10px;
+  }
+
+  .dark_lifepo4 {
+    padding: 70px 20px 0px;
+  }
+
+  .lifepo4_head {
+    font-size: 33px;
+  }
+
+  .lifepo4_body {
+    line-height: 27px;
+    margin-top: 10px;
+  }
+
+  .lifepo4_overview a {
+    margin: 80px auto 0px;
+  }
+
+  #available_lifepo4_battery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .each_lifepo4_battery {
+    width: 50%;
+    margin-bottom: 80px;
+  }
+
+  .datasheet_manual {
+    margin: -30px auto 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+  }
+
+  .datasheet_manual a {
+    background-color: var(--header_color);
+    color: var(--white);
+    margin: 30px 0px 0px 0px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    width: 200px;
+    text-align: center;
   }
 }
 
@@ -2450,6 +2704,56 @@ footer {
     margin: 70px 50px 100px;
     width: calc(100% - 100px);
   }
+
+  /* Solar Batteries */
+
+  .lifepo4_overview {
+    background-image: url("../images/products/renewable_energy/solar_batteries/img_1_desk.jpg");
+    height: 450px;
+  }
+
+  .lifepo4_overview a {
+    margin: 30px auto 0px;
+  }
+
+  .each_lifepo4_battery {
+    width: 33%;
+    margin-bottom: 100px;
+  }
+
+  /* Solar Battery 1 */
+
+  .brief_battery_info {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+  }
+
+  .brief_battery_info .battery_text h2,
+  .brief_battery_info .battery_text div {
+    width: 550px;
+    margin: auto;
+  }
+
+  .brief_battery_info .battery_text h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+
+  .brief_battery_info .battery_text div {
+    font-size: 18px;
+  }
+
+  .battery_main_features {
+    width: 90%;
+    max-width: 1200px;
+    margin: 70px auto;
+  }
+
+  .combined_battery_main_features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+  }
 }
 
 /* User Account For Other Laptop Views */
@@ -2673,5 +2977,44 @@ footer {
   .product_1_table {
     margin: 70px 70px 120px;
     width: calc(100% - 140px);
+  }
+
+  /* Solar Batteries */
+
+  .dark_lifepo4 {
+    padding: 60px 20px 0px;
+  }
+
+  .inner_dark_lifepo4 {
+    width: 70%;
+    margin: auto;
+  }
+
+  .lifepo4_head {
+    font-size: 35px;
+  }
+
+  .lifepo4_body {
+    line-height: 27px;
+    margin-top: 10px;
+    font-size: 17px;
+  }
+
+  .lifepo4_overview a {
+    background-color: var(--header_color);
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: block;
+    width: fit-content;
+    margin: 50px auto 0px;
+  }
+
+  .lifepo4_overview a span:last-child {
+    margin-left: 8px;
   }
 }
