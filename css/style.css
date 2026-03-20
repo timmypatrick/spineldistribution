@@ -1766,6 +1766,14 @@ footer {
   height: 700px;
 }
 
+.solar_panels_overview {
+  background-image: url("../images/products/renewable_energy/solar_panels/solar_panel.png");
+}
+
+.solar_inverters_overview {
+  background-image: url("../images/products/renewable_energy/solar_inverters/inverter.jpg");
+}
+
 .dark_lifepo4 {
   background-color: rgba(39, 8, 51, 0.9);
   color: var(--white);
@@ -1925,11 +1933,11 @@ footer {
   margin-bottom: 20px;
 }
 
-.battery_main_features .check_wrapper {
+.each_battery_main_feature .check_wrapper {
   margin-right: 20px;
 }
 
-.battery_main_features .check_wrapper i {
+.each_battery_main_feature .check_wrapper i {
   font-size: 20px;
 }
 
@@ -1953,6 +1961,193 @@ footer {
 
 .datasheet_manual a span:last-child {
   margin-left: 10px;
+}
+
+.sma_order {
+  margin: 50px auto;
+}
+
+/* Network Cameras */
+
+.dome_overview {
+  padding: 50px 20px;
+  color: var(--grey_text);
+}
+
+.dome_overview .title,
+.dome_overview .sub_title {
+  text-align: center;
+}
+
+img.dome_1 {
+  width: 80%;
+  max-width: 400px;
+  display: block;
+  margin: 0px auto;
+}
+
+img.dome_1_drone {
+  margin: 10px auto 30px;
+}
+
+.dome_overview .sub_title {
+  margin: 0px auto 20px;
+  max-width: 500px;
+}
+
+.dome_overview_features {
+  max-width: 500px;
+  margin: auto;
+}
+
+.dome_overview .check_wrapper {
+  color: var(--sharp_header_color);
+}
+
+.dome_sub_overview {
+  font-size: 20px;
+  text-align: center;
+  color: var(--grey_text);
+  font-weight: lighter;
+  line-height: 35px;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0px auto 70px;
+}
+
+.dome_grid {
+  padding: 0px 20px;
+  color: var(--grey_text);
+  max-width: 550px;
+  margin: auto;
+}
+
+.dome_grid_video iframe,
+.dome_grid_video img {
+  width: 100%;
+}
+
+.dome_grid_text {
+  margin: 10px 0px 50px;
+}
+
+.dome_grid_head {
+  font-size: 25px;
+  text-align: center;
+  margin: 0px 0px 30px;
+}
+
+.axis_products {
+  padding: 0px 20px;
+  color: var(--grey_text);
+}
+
+.axis_product_head {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--grey_line);
+}
+
+.axis_product_body {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.each_axis_product {
+  padding: 0px 20px 20px;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+  margin: 50px auto;
+  display: block;
+  color: var(--grey_text);
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow:
+    -5px 0 10px rgba(0, 0, 0, 0.1),
+    5px 0 10px rgba(0, 0, 0, 0.1),
+    0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.each_axis_product:hover {
+  transform: translateY(-20px);
+  transition: 0.5s;
+}
+
+.axis_products img {
+  width: 150px;
+}
+
+.camera_name {
+  font-weight: 500;
+  margin-top: -20px;
+}
+
+/* Drone Detector */
+
+.mobile_drone .md_text {
+  padding: 30px 20px;
+  color: var(--grey_text);
+  color: rgb(19, 19, 118);
+}
+
+.mobile_drone h1 {
+  margin-bottom: 10px;
+  line-height: 40px;
+}
+
+.mobile_drone img {
+  width: 100%;
+}
+
+.desktop_drone {
+  display: none;
+}
+
+.drone_overview {
+  text-align: center;
+  margin: 30px 20px;
+}
+
+.drone_overview p {
+  margin-top: 10px;
+  color: var(--grey_text);
+}
+
+.threat_detection {
+  margin: 30px 20px;
+  background-color: var(--white);
+  border-radius: 7px;
+  box-shadow:
+    -5px 0 10px rgba(0, 0, 0, 0.1),
+    5px 0 10px rgba(0, 0, 0, 0.1),
+    0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.threat_detection video {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.threat_detection .dt_text {
+  padding: 30px 20px 20px;
+}
+
+.threat_detection .each_dt {
+  margin-bottom: 20px;
+}
+
+.threat_detection .each_dt h3 {
+  margin-bottom: 10px;
+}
+
+.threat_detection .dt_video iframe {
+  border-radius: 7px 7px 0px 0px;
 }
 
 /* Large Mobile View */
@@ -2288,6 +2483,18 @@ footer {
     display: block;
     width: 200px;
     text-align: center;
+  }
+
+  .sma_order {
+    width: fit-content;
+    margin: 15px auto 70px;
+  }
+
+  /* Drone Detection */
+
+  .threat_detection {
+    margin: 30px auto 70px;
+    max-width: 700px;
   }
 }
 
@@ -2712,6 +2919,14 @@ footer {
     height: 450px;
   }
 
+  .solar_panels_overview {
+    background-image: url("../images/products/renewable_energy/solar_panels/solar_panel.png");
+  }
+
+  .solar_inverters_overview {
+    background-image: url("../images/products/renewable_energy/solar_inverters/inverter.jpg");
+  }
+
   .lifepo4_overview a {
     margin: 30px auto 0px;
   }
@@ -2753,6 +2968,137 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 50px;
+  }
+
+  /* Network Cameras */
+
+  .dome_overview {
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .dome_overview .title,
+  .dome_overview .sub_title {
+    text-align: left;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .dome_overview .title {
+    margin-left: 0px;
+    max-width: 100%;
+  }
+
+  .dome_overview .sub_title {
+    margin: 10px auto 40px;
+  }
+
+  .dome_overview_features_overall {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .dome_overview_features_text {
+    order: 1;
+  }
+
+  .dome_overview .check_wrapper i {
+    font-size: 30px;
+    color: var(--header_color);
+  }
+
+  .dome_1 {
+    order: 2;
+  }
+
+  .dome_sub_overview {
+    font-size: 25px;
+    line-height: 40px;
+    width: 80%;
+    max-width: 900px;
+  }
+
+  .dome_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1300px;
+    grid-column-gap: 10%;
+    margin-bottom: 70px;
+  }
+
+  .dome_grid_text,
+  .dome_grid_video_2 {
+    order: 1;
+  }
+  .dome_grid_head {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  .dome_grid_body {
+    font-size: 18px;
+  }
+
+  .dome_grid_video,
+  .dome_grid_text_2 {
+    order: 2;
+  }
+
+  /* Drone Detector */
+
+  .mobile_drone {
+    display: none;
+  }
+
+  .desktop_drone {
+    display: block;
+    background-image: url("../images/products/drone_detection/desktop_drone.avif");
+    background-size: cover;
+    height: 350px;
+  }
+
+  .desktop_drone .dd_text {
+    width: 500px;
+    padding-top: 70px;
+    margin-left: 10%;
+    color: rgb(19, 19, 118);
+    font-weight: 500;
+  }
+
+  .desktop_drone .dd_text h1 {
+    line-height: 40px;
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+  .drone_overview {
+    margin: 50px auto 70px;
+    width: 900px;
+    font-size: 20px;
+  }
+
+  .drone_overview p {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .threat_detection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    padding: 30px;
+  }
+
+  .threat_detection .dt_video {
+    order: 2;
+  }
+
+  .threat_detection .dt_video {
+    order: 1;
+  }
+
+  .threat_detection .dt_video iframe {
+    border-radius: 7px;
   }
 }
 
@@ -3016,5 +3362,11 @@ footer {
 
   .lifepo4_overview a span:last-child {
     margin-left: 8px;
+  }
+
+  /* Network Cameras */
+
+  .dome_overview .title {
+    margin-left: 7%;
   }
 }
