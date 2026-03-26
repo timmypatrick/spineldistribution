@@ -2187,11 +2187,116 @@ img.dome_1_drone {
   margin-left: 7px;
 }
 
-/* Product Page */
+/* Products Page */
 
 .product_hero {
   background-image: url("../images/products.png");
   margin-top: 0px;
+}
+
+/* Solution Pages Begin */
+
+/* Security Sections */
+
+/* Access Control */
+
+.access_control_hero {
+  margin-top: -10px;
+}
+
+.access_control_hero img {
+  width: 100%;
+  display: block;
+}
+
+.access_control_hero .desktop_access {
+  display: none;
+}
+
+.access_control_hero_text {
+  margin: -200px 20px 10%;
+  color: var(--white);
+}
+
+.access_control_hero_text h1 {
+  margin-bottom: 10px;
+}
+
+.access_control_overview {
+  margin: 100px 20px 0px;
+}
+
+.access_control_overview h1 {
+  margin-bottom: 20px;
+  color: var(--sharp_header_color);
+  line-height: 42px;
+}
+
+.access_control_solutions {
+  padding: 20px;
+}
+
+.access_control_solutions img {
+  width: 250px;
+  border-radius: 10px;
+  margin: 30px auto;
+}
+
+img.access_control_enlarge_image {
+  width: 70%;
+}
+
+.access_control_integration {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.access_control_integration h1 {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.access_control_integration a {
+  margin: 30px auto;
+  text-transform: none;
+}
+
+.access_control_features_preamble {
+  margin: 10px 0px 20px;
+}
+
+.fire_mgt_hero_text {
+  margin-top: -265px;
+}
+
+.fire_mgt_hero_text p {
+  width: 55%;
+}
+
+.intrusion_overview {
+  margin-top: 120px;
+}
+
+.intrusion_integration {
+  margin-top: 20px;
+}
+
+.telecom_hero_text {
+  color: var(--white);
+  margin: -60% 20px 40%;
+}
+
+.telecom_desktop {
+  display: none;
+}
+
+.telecom_hero_text p {
+  width: 55%;
+}
+
+.paga_hero_text {
+  width: 70%;
+  margin: -57% 20px 40%;
 }
 
 /* Large Mobile View */
@@ -2540,6 +2645,39 @@ img.dome_1_drone {
     margin: 30px auto 70px;
     max-width: 700px;
   }
+
+  /* Solution Pages Begin */
+
+  /* Security Sections */
+
+  /* Access Control */
+
+  .access_control_hero_text {
+    margin: -300px 10% 25%;
+    width: 500px;
+    font-size: 18px;
+  }
+
+  .access_control_hero_text h1 {
+    font-size: 40px;
+  }
+
+  .intrusion_overview {
+    margin-top: -5%;
+  }
+
+  .telecom_hero_text {
+    margin: -65% 7% 50%;
+  }
+
+  .telecom_hero_text p {
+    width: 70%;
+  }
+
+  .paga_hero_text {
+    width: 73%;
+    margin: -55% 5% 45%;
+  }
 }
 
 /* User Account For Other Tablet Views */
@@ -2613,6 +2751,11 @@ img.dome_1_drone {
 @media only screen and (min-width: 920px) {
   .user_account .account_pointer {
     left: 68%;
+  }
+
+  .paga_hero_text {
+    width: 73%;
+    margin: -55% 5% 50%;
   }
 }
 
@@ -3167,10 +3310,98 @@ img.dome_1_drone {
     margin: 50px 30px;
   }
 
-  /* Product Page */
+  /* Products Page */
 
   .product_hero h1 {
     margin: 100px 0px 0px auto;
+  }
+
+  /* Solution Pages Begin */
+
+  /* Security Sections */
+
+  /* Access Control */
+
+  .access_control_hero .mobile_access {
+    display: none;
+  }
+
+  .access_control_hero .desktop_access {
+    display: block;
+  }
+
+  .access_control_hero_text {
+    margin: -350px 10% 25%;
+  }
+
+  .access_control_hero_text h1 {
+    font-size: 50px;
+  }
+
+  .access_control_hero_text p {
+    line-height: 33px;
+  }
+
+  .access_control_overview {
+    margin: -30px auto 50px;
+    width: 900px;
+  }
+
+  .access_control_overview h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  .access_control_order_1 {
+    order: 1;
+  }
+
+  .access_control_order_2 {
+    order: 2;
+  }
+
+  .dome_overview .access_control_title_order_2 {
+    text-align: right;
+    margin-right: 10%;
+  }
+
+  .access_control_solutions {
+    padding: 20px;
+  }
+
+  .access_control_integration {
+    margin-top: 0px;
+    margin-bottom: 100px;
+  }
+
+  .access_control_integration a {
+    margin: 30px 0px;
+    text-transform: uppercase;
+  }
+
+  .intrusion_overview {
+    margin-top: -10%;
+  }
+
+  .telecom_hero_text {
+    margin: -27% 7% 15%;
+  }
+
+  .telecom_hero_text p {
+    width: 70%;
+  }
+
+  .telecom_mobile {
+    display: none;
+  }
+
+  .telecom_desktop {
+    display: block;
+  }
+
+  .paga_hero_text {
+    width: 65%;
+    margin: -30% 5% 28%;
   }
 }
 
@@ -3445,5 +3676,40 @@ img.dome_1_drone {
 
   .dome_overview .title {
     margin-left: 7%;
+  }
+
+  /* Solution Pages Begin */
+
+  /* Security Sections */
+
+  /* Access Control */
+
+  .access_control_hero_text {
+    margin: -450px 10% 25%;
+  }
+
+  .access_control_overview {
+    width: 1100px;
+  }
+
+  .access_control_integration {
+    margin-top: 30px;
+  }
+
+  .intrusion_overview {
+    margin-top: -6%;
+  }
+
+  .telecom_hero_text {
+    margin: -30% 10% 25%;
+  }
+
+  .telecom_hero_text p {
+    width: 100%;
+  }
+
+  .paga_hero_text {
+    width: 65%;
+    margin: -28% 8% 28%;
   }
 }
