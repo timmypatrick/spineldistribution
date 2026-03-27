@@ -437,3 +437,95 @@ function my_animation() {
   });
 }
 my_animation();
+
+// Search Bar Functionality
+
+let searchBar = document.querySelector(".search_container i");
+
+function handleSearch() {
+  const query = document
+    .querySelector(".search_container input")
+    .value.toLowerCase()
+    .trim();
+  if (query.includes("enclosure")) {
+    window.location.href =
+      "../pages/products/enclosures/small_enclosures/small_enclosures.html";
+  } else if (query.includes("rack")) {
+    window.location.href =
+      "../pages/products/enclosures/it_rack_systems/it_rack_systems.html";
+  } else if (query.includes("battery")) {
+    window.location.href =
+      "../pages/products/renewable_energy/solar_batteries/solar_batteries.html";
+  } else if (query.includes("panel")) {
+    window.location.href =
+      "../pages/products/renewable_energy/solar_panels/solar_panels.html";
+  } else if (query.includes("solar")) {
+    window.location.href =
+      "../pages/products/renewable_energy/solar_panels/solar_panels.html";
+  } else if (query.includes("accessories")) {
+    window.location.href =
+      "../pages/products/renewable_energy/solar_mount_accessories/solar_mount_accessories.html";
+  } else if (query.includes("solar")) {
+    window.location.href =
+      "../pages/products/renewable_energy/solar_mount_accessories/solar_mount_accessories.html";
+  } else if (query.includes("dome")) {
+    window.location.href =
+      "../pages/products/network_cameras/dome_cameras/dome_cameras.html";
+  } else if (query.includes("box")) {
+    window.location.href =
+      "../pages/products/network_cameras/box_cameras/box_cameras.html";
+  } else if (query.includes("bullet")) {
+    window.location.href =
+      "../pages/products/network_cameras/bullet_cameras/bullet_cameras.html";
+  } else if (query.includes("PTZ")) {
+    window.location.href =
+      "../pages/products/network_cameras/ptz_cameras/ptz_cameras.html";
+  } else if (query.includes("drone")) {
+    window.location.href =
+      "../pages/products/drone_detection/silent_aeron.html";
+  } else if (query.includes("electrical system")) {
+    window.location.href =
+      "../pages/products/electrical_systems/control_stations/control_station.html";
+  } else if (query.includes("distribution panel")) {
+    window.location.href =
+      "../pages/products/electrical_systems/distribution_panels/distribution_panels.html";
+  } else if (query.includes("junction box")) {
+    window.location.href =
+      "../pages/products/electrical_systems/junction_box/junction_box.html";
+  } else if (query.includes("switch disconnector")) {
+    window.location.href =
+      "../pages/products/electrical_systems/switch_disconnector/switch_disconnector.html";
+  } else if (query.includes("cable")) {
+    window.location.href =
+      "../pages/products/hybrid_cabling/installation/installation.html";
+  } else if (query.includes("fibre_optic")) {
+    window.location.href =
+      "../pages/products/hybrid_cabling/fibre_optic/fibre_optic.html";
+  } else if (query.includes("aces control")) {
+    window.location.href =
+      "../pages/solutions/security/access_control/access_control.html";
+  } else if (query.includes("cctv")) {
+    window.location.href = "../pages/solutions/security/cctv/cctv.html";
+  } else if (query.includes("fire")) {
+    window.location.href = "../pages/solutions/security/fire_mgt/fire_mgt.html";
+  } else if (query.includes("intrusion")) {
+    window.location.href =
+      "../pages/solutions/security/intrusion/intrusion.html";
+  } else if (query.includes("telecom")) {
+    window.location.href = "../pages/solutions/telecom/wireless/wireless.html";
+  } else if (query.includes("paga")) {
+    window.location.href = "../pages/solutions/multimedia/paga/paga.html";
+  } else if (query.includes("av")) {
+    window.location.href =
+      "../pages/solutions/multimedia/audio_video/audio_video.html";
+  } else if (query.includes("meeting")) {
+    window.location.href =
+      "../pages/solutions/multimedia/meeting_room/meeting_room.html";
+  } else if (query.includes("power")) {
+    window.location.href = "pages/solutions/energy/on_grid/on_grid.html";
+  } else {
+    window.location.href = "../products.html";
+  }
+}
+
+searchBar.addEventListener("click", handleSearch);
