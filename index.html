@@ -903,18 +903,6 @@
           </div>
         </section>
       </section>
-
-      <!-- Whatsapp Chat -->
-      <section class="whatsapp_chat">
-        <a
-          href="http://api.whatsapp.com/send?phone=2348128561607&text=Hi%20Spinel%20Distribution,%20my%20name%20is&source=&data="
-        >
-          <div class="whatsapp_text">Chat with us</div>
-          <div class="whatsapp_icon">
-            <img src="images/whatsapp.png" alt="whatsapp" />
-          </div>
-        </a>
-      </section>
     </main>
 
     <footer>
@@ -1196,6 +1184,37 @@
 
           document.getElementById("form").reset();
         });
+
+      (function () {
+        if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+          window.chatbase = (...arguments) => {
+            if (!window.chatbase.q) {
+              window.chatbase.q = [];
+            }
+            window.chatbase.q.push(arguments);
+          };
+          window.chatbase = new Proxy(window.chatbase, {
+            get(target, prop) {
+              if (prop === "q") {
+                return target.q;
+              }
+              return (...args) => target(prop, ...args);
+            },
+          });
+        }
+        const onLoad = function () {
+          const script = document.createElement("script");
+          script.src = "https://www.chatbase.co/embed.min.js";
+          script.id = "vXsLIm0pRmqxQ3F1N05Gi";
+          script.domain = "www.chatbase.co";
+          document.body.appendChild(script);
+        };
+        if (document.readyState === "complete") {
+          onLoad();
+        } else {
+          window.addEventListener("load", onLoad);
+        }
+      })();
     </script>
   </body>
 </html>
