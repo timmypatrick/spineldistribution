@@ -2722,6 +2722,10 @@ img.access_control_enlarge_image {
     margin-top: 20px;
   }
 
+  .product_hero h1 {
+    margin: 100px 0% 0px auto;
+  }
+
   /* Contact Page */
 
   .main_body_content .contact_form {
@@ -2739,12 +2743,6 @@ img.access_control_enlarge_image {
     width: 300px;
     display: block;
     margin: auto;
-  }
-
-  /* About Page */
-
-  .product_hero h1 {
-    margin: 100px 0% 0px auto;
   }
 }
 
@@ -2944,7 +2942,6 @@ img.access_control_enlarge_image {
   /* Why Choose Us */
 
   .why_us {
-    /* margin-top: 50px; */
     padding: 70px 50px;
   }
 
@@ -3241,6 +3238,13 @@ img.access_control_enlarge_image {
   .desktop_drone {
     display: block;
     background-image: url("../images/products/drone_detection/desktop_drone.avif");
+    background-size: cover;
+    height: 350px;
+  }
+
+  .desktop_ex_camera {
+    display: block;
+    background-image: url("../images/products/explosion_proof_cameras/ex_site_pro_ir_ptz/ex_camera_desktop.avif");
     background-size: cover;
     height: 350px;
   }
@@ -3545,7 +3549,6 @@ img.access_control_enlarge_image {
   /* Why Choose Us */
 
   .why_us {
-    /* margin-top: 50px; */
     padding: 70px;
   }
 
