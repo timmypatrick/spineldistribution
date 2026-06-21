@@ -438,6 +438,8 @@ function my_animation() {
 }
 my_animation();
 
+// Hybrid Composite Cable
+
 // Search Bar Functionality
 
 let searchBar = document.querySelector(".search_container i");

@@ -2072,9 +2072,39 @@ img.dome_1_drone {
   width: 80px;
 }
 
+.camera_name,
+.camera_description,
+.camera_price {
+  text-align: left;
+}
+
 .camera_name {
   font-weight: 500;
   margin-top: -20px;
+}
+
+.camera_price {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--logo_color);
+}
+
+.camera_order {
+  background-color: var(--header_color);
+  color: var(--white);
+  margin: 30px 0px 0px 0px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  width: 170px;
+  text-align: center;
+}
+
+.camera_order span {
+  font-size: 20px;
 }
 
 /* Drone Detector */
