@@ -2094,12 +2094,12 @@ img.dome_1_drone {
   background-color: var(--header_color);
   color: var(--white);
   margin: 30px 0px 0px 0px;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
   display: block;
-  width: 170px;
+  width: 200px;
   text-align: center;
 }
 
